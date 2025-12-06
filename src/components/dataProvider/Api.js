@@ -27,7 +27,7 @@ updateCard(cardId, like){
 }
 
 deleteCard(cardId){
-    return fetch(`${this._baseURL}/deleteCard/${cardId}`, {
+    return fetch(`${this._baseURL}/delateCard/${cardId}`, {
     method: "DELETE",
     headers: this._header,
 }).then(this._handleServerResponse);

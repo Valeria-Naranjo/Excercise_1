@@ -6,15 +6,15 @@ const Card = (props) => {
         <img className="place-card__image" src={card.link} alt={card.name} />
         <button
           aria-label="Remove place"
-          className="place-card__delete-button"
+          className="card__delete-button"
           type="button"
           onClick={() => {
-            console.log(card);
+            console.log(card + "has been deleted");
             _handleDeleteCard(card);
           }}
         ></button>
         <div className="place-card__description">
-          <h2 classn="place-card__title">{card.name}</h2>
+          <h2 className="place-card__title">{card.name}</h2>
           <button
             aria-label="Like place"
             className={
