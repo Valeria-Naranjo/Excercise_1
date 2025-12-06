@@ -11,7 +11,7 @@ const Profile = () => {
               className="traveler-profile__edit-btn"
               type="button"
             >X</button>
-            <p className="traveler-profile__bio">Experto </p>
+            <p className="traveler-profile__bio">IT Student</p>
           </div>
           <button
             aria-label="Add new place"
