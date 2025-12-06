@@ -1,23 +1,35 @@
 import "./Card.css";
 const Card = (props) => {
-  const {card}= props;
+  const {card, _handleUpdateCard, _handleDeleteCard}= props;
      return(
-      <li class="place-card">
-        <img class="place-card__image" src={card.link} alt={card.name} />
+      <li className="place-card">
+        <img className="place-card__image" src={card.link} alt={card.name} />
         <button
           aria-label="Remove place"
-          class="place-card__delete-button"
+          className="place-card__delete-button"
           type="button"
+          onClick={() => {
+            console.log(card);
+            _handleDeleteCard(card);
+          }}
         ></button>
-        <div class="place-card__description">
-          <h2 class="place-card__title">{card.name}</h2>
+        <div className="place-card__description">
+          <h2 classn="place-card__title">{card.name}</h2>
           <button
             aria-label="Like place"
-            class="place-card__like-button"
+            className={
+              card.like
+                ? "card__like-button"
+                : "card__like-button card__like-button_is-active"
+            }
             type="button"
+            onClick={() => {
+              _handleUpdateCard(card);
+            }}
           ></button>
         </div>
       </li>
+    
      );
 };
 

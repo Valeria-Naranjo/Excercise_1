@@ -10,16 +10,18 @@ function App() {
   const [cards, setCards] = useState ([]); // состояние для хранения карточек
   console.log("componenteeeeeeeeeeeee");
 
-  useEffect(() => {
-    (async() => {
-      await api.getCards().then((data)=>{
-        setCards(data); //keeps data in cards state
-      }).catch((err) => {
-        console.error("Failed to fetch cards:" + err);
-      });
-    })(); //los parentesis al final son para ejecutar la función en automáticamente
+ useEffect(() => {
+  async function loadCards() {
+    try {
+      const data = await api.getCards();
+      setCards(data);
+    } catch (err) {
+      console.error("Failed to fetch cards: " + err);
+    }
+  }
 
-  }, []); // пустой массив зависимостей, чтобы эффект выполнился только один раз при монтировании компонента  
+  loadCards();
+}, []); // пустой массив зависимостей, чтобы эффект выполнился только один раз при монтировании компонента  
 
   return (
     
