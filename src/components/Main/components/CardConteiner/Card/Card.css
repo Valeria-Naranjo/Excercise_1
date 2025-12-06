@@ -66,7 +66,7 @@
   object-fit: cover;
 }
 
-.place-card__like-button {
+.card__like-button {
   width: 21px;
   height: 19px;
   background: transparent url("/images/like-inactive.svg") center no-repeat;
@@ -81,10 +81,10 @@
   cursor: pointer;
 }
 
-.place-card__delete-button {
+.card__delete-button {
   width: 18px;
   height: 18px;
-  background: transparent url("../images/delete-icon.svg") center no-repeat;
+  background: transparent url("/images/delete-icon.svg") center no-repeat;
   background-size: 18px 18px;
   border: none;
   cursor: pointer;
@@ -99,6 +99,6 @@
   opacity: 0.6;
 }
 
-.place-card__like-button_is-active {
-  background: transparent url("../images/like-active.svg") no-repeat;
+.card__like-button_is-active {
+  background: transparent url("/images/like-active.svg") no-repeat;
 }

@@ -4,7 +4,7 @@ import Profile from "./components/Profile/Profile.jsx";
 import CardContainer from "./components/CardConteiner/CardConteriner.jsx"
 
 const Main = (props)  => {
-  const {cards} = props;
+  const {cards, _handleDeleteCard, _handleUpdateCard } = props;
   return (
     <>
       <main className="main">
@@ -12,7 +12,9 @@ const Main = (props)  => {
           <Profile></Profile>
         </section>
         <section className="user">
-          <CardContainer cards={cards}>
+          <CardContainer cards={cards}
+          _handleDeleteCard={_handleDeleteCard}
+          _handleUpdateCard={_handleUpdateCard}>
 
           </CardContainer>
         </section>
