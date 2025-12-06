@@ -2,7 +2,6 @@ import "./Card.css";
 const Card = (props) => {
   const {card}= props;
      return(
-          <template id="template-place-card">
       <li class="place-card">
         <img class="place-card__image" src={card.link} alt={card.name} />
         <button
@@ -19,7 +18,6 @@ const Card = (props) => {
           ></button>
         </div>
       </li>
-    </template>
      );
 };
 
