@@ -1,5 +1,5 @@
 import Card from "./Card/Card.jsx";
-import "./CardConteriner.css";
+import "./CardConteiner.css";
 
 
 const cardContainer = (props)  => {
