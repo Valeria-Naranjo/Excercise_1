@@ -1,6 +1,25 @@
 .header {
-     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-     font-size: 32px;
-     color: red;
+  min-height: 120px;
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  /* Use RGBA to specify opacity */
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  background-color: black;
+  padding: 10px 20px;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.header__title{
+     color: antiquewhite;
      text-align: center;
+     margin-left: 3rem;
+}
+
+.header__logo {
+  width: 160px;
+  height: 100px;
+  object-fit: contain;
+  align-items: center;
+  margin-left: 6rem;
 }

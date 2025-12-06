@@ -1,16 +1,23 @@
+import { Children } from "react";
 import "./Main.css";
-import Section from "./components/Section/Section";
-import Row from "./components/Row/Row";
-import Botonazo from "./components/botonazo/Botonazo"
+import Traveler from "./components/Traveler/Traveler.jsx";
+import Profile from "./components/Profile/Profile.jsx";
+import Card from "./components/Card/Card.jsx";
+import CardContainer from "./components/CardConteiner/CardConteriner.jsx"
 
-function Main() {
+const Main = (props)  => {
+  const {cards} = props;
   return (
     <>
-      <main>
-        <p>Estamos dentro del componente Main</p>
-        <Section>
-          <Row />
-        </Section>
+      <main className="main">
+        <section className="gallery">
+          <Profile></Profile>
+        </section>
+        <section className="user">
+          <CardContainer cards={cards}>
+
+          </CardContainer>
+        </section>
       </main>
      
     </>

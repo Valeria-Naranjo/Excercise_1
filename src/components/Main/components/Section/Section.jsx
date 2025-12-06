@@ -1,12 +1,9 @@
 import "./Section.css"
-function Section ({children}) {
+function Section () {
      return ( 
     <>
     
-     <div className="children">
-            {children}
-             <p>este componente tendrá un children</p>
-     </div>
+     
     </>
      );
 }
