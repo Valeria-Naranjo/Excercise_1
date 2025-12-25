@@ -1,3 +1,8 @@
+// Card.jsx
+// Componente reutilizable en React para mostrar una tarjeta de lugar
+// Incluye acciones de like y delete usando props y handlers externos
+
+
 import "./Card.css";
 const Card = (props) => {
   const {card, _handleUpdateCard, _handleDeleteCard}= props;
@@ -9,7 +14,6 @@ const Card = (props) => {
           className="card__delete-button"
           type="button"
           onClick={() => {
-            console.log(card + "has been deleted");
             _handleDeleteCard(card);
           }}
         ></button>
